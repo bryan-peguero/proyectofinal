@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+	</head>
+		<body>
+			<h1>Mapa Meteoritos</h1>
+			<div id="map" style="position: absolute; top:0; bottom:0; left:0; right:0;"></div>
+			<script>
+				var map = L.map('map').setView([18.45,-69.66], 8);
+					
+				L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+					attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+				}).addTo(map);
+
+				L.marker([18.3778177,-71.5292964]).addTo(map)
+                .bindPopup('BRYAN EVANS')
+                .openPopup();
+					
+			</script>
+		</body>
+</html>
